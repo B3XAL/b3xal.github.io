@@ -1,0 +1,23 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>{{ site.title }} - English</title>
+    <link>https://b3xal.github.io/en/</link>
+    <description>Latest posts in English</description>
+    <language>en-us</language>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    {% assign posts_en = site.posts | where_exp: "post", "post.lang == 'en'" | sort: "date" | reverse %}
+    {% for post in posts_en limit:3 %}
+    <item>
+      <title>{{ post.title }}</title>
+      <link>https://b3xal.github.io{{ post.url }}</link>
+      <guid isPermaLink="true">https://b3xal.github.io{{ post.url }}</guid>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <description><![CDATA[{{ post.excerpt | strip_html | truncate: 200 }}]]></description>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>
