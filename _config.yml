@@ -1,1 +1,9 @@
-baseurl: "/es"
+baseurl: ""
+
+collections:
+  posts-es:
+    output: true
+    permalink: /:year/:month/:day/:title/  # Español en raíz sin prefijo /es/
+  posts-en:
+    output: true
+    permalink: /en/:year/:month/:day/:title/
