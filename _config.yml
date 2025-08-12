@@ -2,6 +2,9 @@ title: "Blog de Seguridad"
 description: "Blog personal para aprender y compartir hacking web"
 baseurl: "" # dejar vacío si el repo se llama usuario.github.io
 url: "https://b3xal.github.io" # cambia por tu usuario
+github_username: b3xal
+linkedin_username: julen-garrido-estevez
+email: julengarridoestevez@gmail.com
 
 theme: minima
 
