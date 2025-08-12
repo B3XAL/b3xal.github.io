@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Posts en Español
 ---
 
 <div class="home">
@@ -12,13 +13,16 @@ layout: default
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.data.title }}</a>
+          <a href="{{ post.url }}">{{ post.data.title }}</a>
         </h2>
       </li>
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <p class="rss-subscribe">Suscríbete <a href="{{ "/feed.xml" }}">vía RSS</a></p>
+
+  <nav>
+    <a href="/es/">Español</a> | <a href="/en/">English</a>
+  </nav>
 
 </div>
-
