@@ -26,11 +26,12 @@ HTTP/1.1 permite mandar varias peticiones seguidas sin esperar la respuesta de c
 **Ejemplo básico:**
 
 ```http
-GET /index.html HTTP/1.1  
-Host: example.com
-
-GET /robots.txt HTTP/1.1  
-Host: example.com
+GET /index.html HTTP/1.1\r\n
+Host: example.com\r\n
+\r\n
+GET /robots.txt HTTP/1.1\r\n  
+Host: example.com\r\n
+\r\n
 ```
 
 El servidor responde primero a `/index.html` y luego a `/robots.txt`, en ese orden.
@@ -64,7 +65,7 @@ Si algo no cuadra, el servidor se queda esperando más bytes en el flujo TCP.
 
 Request 1:
 ```http
-POST /resources/images/avatarDefault.svg HTTP/1.1
+POST /resources/images/avatarDefault.svg HTTP/1.1\r\n
 Host: 0a4600d204a0636b805603eb009a00a8.web-security-academy.net\r\n
 Content-Type: application/x-www-form-urlencoded\r\n
 Content-Length: 400\r\n
