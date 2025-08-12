@@ -3,7 +3,8 @@ baseurl: ""
 collections:
   posts-es:
     output: true
-    permalink: /:year/:month/:day/:title/  # Español en raíz sin prefijo /es/
+    permalink: /es/:year/:month/:day/:title/
   posts-en:
     output: true
     permalink: /en/:year/:month/:day/:title/
+
