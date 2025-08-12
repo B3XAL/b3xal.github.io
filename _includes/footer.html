@@ -1,0 +1,50 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <h2 class="footer-heading">{{ site.title }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>{{ site.title }}</li>
+          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+
+          {% if site.github_username %}
+          <li>
+            <a href="https://github.com/{{ site.github_username }}">
+              <span class="icon icon--github">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 ..."/>
+                </svg>
+              </span>
+              <span class="username">{{ site.github_username }}</span>
+            </a>
+          </li>
+          {% endif %}
+
+          {% if site.linkedin_username %}
+          <li>
+            <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}">
+              <span class="icon icon--linkedin">
+                <svg viewBox="0 0 16 16">
+                  <path fill="#828282" d="M14.447,14.448H11.89V10.64c0-0.907-0.017-2.075-1.265-2.075 ..."/>
+                </svg>
+              </span>
+              <span class="username">{{ site.linkedin_username }}</span>
+            </a>
+          </li>
+          {% endif %}
+
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p class="text">{{ site.description }}</p>
+      </div>
+    </div>
+  </div>
+</footer>
