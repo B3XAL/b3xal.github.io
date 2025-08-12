@@ -26,10 +26,10 @@ HTTP/1.1 permite mandar varias peticiones seguidas sin esperar la respuesta de c
 **Ejemplo básico:**
 
 ```http
-GET /index.html HTTP/1.1\r\n
+GET /index.html HTTP/1.1
 Host: example.com\r\n
 \r\n
-GET /robots.txt HTTP/1.1\r\n  
+GET /robots.txt HTTP/1.1 
 Host: example.com\r\n
 \r\n
 ```
@@ -65,7 +65,7 @@ Si algo no cuadra, el servidor se queda esperando más bytes en el flujo TCP.
 
 Request 1:
 ```http
-POST /resources/images/avatarDefault.svg HTTP/1.1\r\n
+POST /resources/images/avatarDefault.svg HTTP/1.1
 Host: 0a4600d204a0636b805603eb009a00a8.web-security-academy.net\r\n
 Content-Type: application/x-www-form-urlencoded\r\n
 Content-Length: 400\r\n
@@ -101,7 +101,7 @@ Sigamos profundizando en Pipelining
 Request 1:
 
 ```http
-POST /resources/images/avatarDefault.svg HTTP/1.1\r\n
+POST /resources/images/avatarDefault.svg HTTP/1.1
 Host: 0a4600d204a0636b805603eb009a00a8.web-security-academy.net\r\n
 Content-Type: application/x-www-form-urlencoded\r\n
 Connection: Keep-alive\r\n
@@ -113,7 +113,7 @@ X-Ignore: X
 
 Request 2:
 ```http
-GET / HTTP/1.1\r\n
+GET / HTTP/1.1
 Host: 0a4600d204a0636b805603eb009a00a8.web-security-academy.net\r\n
 \r\n
 ```
@@ -147,7 +147,7 @@ Lo que sobra se queda en el buffer y se usa como inicio de la siguiente petició
 
 Request 1: 
 ```http
-POST /resources/images/avatarDefault.svg HTTP/1.1\r\n
+POST /resources/images/avatarDefault.svg HTTP/1.1
 Host: 0a4600d204a0636b805603eb009a00a8.web-security-academy.net\r\n
 Content-Type: application/x-www-form-urlencoded\r\n
 Connection: Keep-alive\r\n
@@ -159,7 +159,7 @@ X-Ignore:
 
 Request 2:
 ```http
-XGET / HTTP/1.1\r\n
+XGET / HTTP/1.1
 Host: 0a4600d204a0636b805603eb009a00a8.web-security-academy.net\r\n
 \r\n
 ```
@@ -172,7 +172,7 @@ En este ejemplo vamos a hacer una petición con `Content-Length: 0`, que a simpl
 
 Request 1:
 ```http
-POST /resources/images/avatarDefault.svg HTTP/1.1\r\n
+POST /resources/images/avatarDefault.svg HTTP/1.1
 Host: 0a4600d204a0636b805603eb009a00a8.web-security-academy.net\r\n
 Content-Type: application/x-www-form-urlencoded\r\n
 Connection: Keep-alive\r\n
@@ -183,7 +183,7 @@ X-Ignore: X
 ```
 Request 2:
 ```http
-XGET / HTTP/1.1\r\n
+XGET / HTTP/1.1
 Host: 0a4600d204a0636b805603eb009a00a8.web-security-academy.net\r\n
 \r\n
 ```
@@ -217,7 +217,7 @@ Lo que el servidor realmente ve es esto:
 
 Request 1:
 ```http
-POST /resources/images/avatarDefault.svg HTTP/1.1\r\n
+POST /resources/images/avatarDefault.svg HTTP/1.1
 Host: 0a4600d204a0636b805603eb009a00a8.web-security-academy.net\r\n
 Content-Type: application/x-www-form-urlencoded\r\n
 Connection: Keep-alive\r\n
@@ -228,7 +228,7 @@ Content-Length: 0\r\n
 Request 2 (lo que queda en el buffer junto con la siguiente petición):
 
 ```http
-POST /X HTTP/1.1\r\n
+POST /X HTTP/1.1
 X-Ignore: XXGET / HTTP/1.1\r\n
 Host: 0a4600d204a0636b805603eb009a00a8.web-security-academy.net\r\n
 \r\n
@@ -257,7 +257,7 @@ En este caso vamos a ver un ejemplo de tipo CL.0.
 
 Request 1:
 ```http
-POST /resources/images/avatarDefault.svg HTTP/1.1\r\n
+POST /resources/images/avatarDefault.svg HTTP/1.1
 Host: 0aaf00fc04369b408159178a00b00064.web-security-academy.net\r\n
 Content-Type: application/x-www-form-urlencoded\r\n
 Connection: Keep-alive\r\n
@@ -268,7 +268,7 @@ X-Ignore: X\
 ```
 Request 2:
 ```http
-GET / HTTP/1.1\r\n
+GET / HTTP/1.1
 Host: 0aaf00fc04369b408159178a00b00064.web-security-academy.net\r\n
 \r\n
 ```
