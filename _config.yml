@@ -1,10 +1,10 @@
-baseurl: ""
+title: "Blog de Seguridad"
+description: "Blog personal para aprender y compartir hacking web"
+baseurl: "" # dejar vacío si el repo se llama usuario.github.io
+url: "https://b3xal.github.io" # cambia por tu usuario
 
-collections:
-  posts-es:
-    output: true
-    permalink: /es/:year/:month/:day/:title/
-  posts-en:
-    output: true
-    permalink: /en/:year/:month/:day/:title/
+theme: minima
 
+markdown: kramdown
+plugins:
+  - jekyll-feed
